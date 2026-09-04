@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    I want this class to be identified as bean -->
+    <bean id="myBean" class="com.car.exapmple.MyBean">
+<!--        it will internally invoke the setter so your class must have setter if you want this to work -->
+        <property name="message" value="Spring Managing Bean"></property>
+    </bean>
+
+</beans>
