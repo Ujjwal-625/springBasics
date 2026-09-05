@@ -1,4 +1,4 @@
-package com.dependencyInjection;
+package com.dependencyInjection.constructorInjection;
 
 public class Specification {
     private String brand;

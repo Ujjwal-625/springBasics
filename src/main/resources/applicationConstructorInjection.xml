@@ -6,12 +6,12 @@
 
     <!-- bean definitions here -->
     <!--   making the dependency  -->
-    <bean id="carSpecification" class="com.dependencyInjection.Specification">
+    <bean id="carSpecification" class="com.dependencyInjection.constructorInjection.Specification">
         <property name="brand" value="Skoda"></property>
         <property name="model" value="Salavia"></property>
     </bean>
 <!--    Now we have to inject that dependency to the dependent class -->
-    <bean id="mycar" class="com.dependencyInjection.Car">
+    <bean id="mycar" class="com.dependencyInjection.constructorInjection.Car">
         <constructor-arg ref="carSpecification" />
     </bean>
 
