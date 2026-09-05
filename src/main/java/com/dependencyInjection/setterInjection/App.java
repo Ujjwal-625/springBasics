@@ -1,0 +1,15 @@
+package com.dependencyInjection.setterInjection;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+    public static void main(String[] args) {
+        ApplicationContext applicationContext  =new
+                ClassPathXmlApplicationContext("applicationSetterInjection.xml");
+
+        Car car = (Car) applicationContext.getBean("mycar");
+
+        car.showDetails();
+    }
+}
