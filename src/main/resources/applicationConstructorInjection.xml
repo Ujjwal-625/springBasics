@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!--   making the dependency  -->
+    <bean id="carSpecification" class="com.dependencyInjection.Specification">
+        <property name="brand" value="Skoda"></property>
+        <property name="model" value="Salavia"></property>
+    </bean>
+<!--    Now we have to inject that dependency to the dependent class -->
+    <bean id="mycar" class="com.dependencyInjection.Car">
+        <constructor-arg ref="carSpecification" />
+    </bean>
+
+</beans>
