@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!--   making the dependency  -->
+    <bean id="userDatabase" class="com.ioc.UserDatabase">
+
+    </bean>
+    <!--    Now we have to inject that dependency to the dependent class -->
+    <bean id="userManager" class="com.ioc.UserManager">
+        <!--        <constructor-arg ref="carSpecification" />-->
+<!--        <property name="specification" ref="carSpecification"></property>-->
+        <constructor-arg ref="userDatabase"/>
+    </bean>
+
+    <bean id="webServiceDataProvider" class="com.ioc.WebServiceDataProvider">
+
+    </bean>
+    <!--    Now we have to inject that dependency to the dependent class -->
+    <bean id="userManager1" class="com.ioc.UserManager">
+        <!--        <constructor-arg ref="carSpecification" />-->
+        <!--        <property name="specification" ref="carSpecification"></property>-->
+        <constructor-arg ref="webServiceDataProvider"/>
+    </bean>
+
+</beans>
