@@ -15,6 +15,8 @@ public class Car {
 
     public Car(Specification specification) {
         this.specification = specification;
+
+        //this constructor is mandotory if you are doing autowiring by constructor
     }
 
     public void showDetails(){
